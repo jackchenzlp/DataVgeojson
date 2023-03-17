@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DataVGeojson</title>
+    
+    <link href="../img/favicon.png" rel="icon" type="image/x-icon"><!-- 图标库 -->
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap//css/style.css">
+    <!-- leaflet -->
+    <link rel="stylesheet" href="../lib/leafletLib/leaflet.css">
+    <!-- leaflet Draw -->
+    <link rel="stylesheet" href="../lib/Leaflet-Geoman/leaflet-geoman.css">
+    <!-- leaflet plugins -->
+    <link rel="stylesheet" href="../lib/leaflet-marker-highlight/leaflet-marker-highlight.css"><!-- 高亮 -->
+    <link rel="stylesheet" href="../lib/leaflet-contextmenu/leaflet.contextmenu.min.css"> <!-- 上下文菜单用于鼠标右键 -->
+    <!-- codeMirror -->
+    <link rel="stylesheet" href="../lib/codeMirror/lib/codemirror.css">
+    <link rel="stylesheet" href="../lib/codeMirror/theme/idea.css">
+    <style>
+        /* color popup */
+        .hr-line-solid {
+            border-top: 2px solid #D3D3D3;
+            color: #fff;
+            background-color: #FAEBD7;
+            height: 1px;
+            margin: 5px 0
+        }
+
+        ;
+    </style>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center" style="z-index:10000 ;">
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="" class="logo d-flex align-items-center">
+                <img src="../img/logo.png" alt="">
+                <span class="d-none d-lg-block">DataVGeojson</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+    </header><!-- End Header -->
+    <main id="main" class="main">
+        <section class="section">
+
+            <div class="container-fluid col-lg-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card" style="width: 100%; height: 800px">
+                            <div class="card-body">
+                                <h5 class="card-title">MAP</h5>
+                                <div id="map" style="width: 100%; height: 91%; border: solid 1px gray;"></div>
+                                <div id="selected"></div>
+                            </div>
+                        </div>
+                    </div> <!-- End Map -->
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 100%; height: 800px">
+                            <div class="card-body">
+                                <h5 class="card-title">GEOJSON-HELP</h5>
+                                <!-- Default Tabs -->
+                                <ul class="nav nav-tabs d-flex" id="myTabjustified" role="tablist">
+                                    <li class="nav-item flex-fill" role="presentation">
+                                        <button class="nav-link w-100 active" id="geojson-tab" data-bs-toggle="tab"
+                                            data-bs-target="#geojson-justified" type="button" role="tab"
+                                            aria-controls="Geojson" aria-selected="true">DarwGeojson</button>
+                                    </li>
+                                    <li class="nav-item flex-fill" role="presentation">
+                                        <button class="nav-link w-100" id="json-tab" data-bs-toggle="tab"
+                                            data-bs-target="#json-justified" type="button" role="tab"
+                                            aria-controls="profile" aria-selected="false">FileJson</button>
+                                    </li>
+                                    <li class="nav-item flex-fill" role="presentation">
+                                        <button class="nav-link w-100" id="help-tab" data-bs-toggle="tab"
+                                            data-bs-target="#help-justified" type="button" role="tab"
+                                            aria-controls="contact" aria-selected="false">help</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-2" id="myTabjustifiedContent"
+                                    style="width: 100%; height:85%;">
+                                    <div class="tab-pane fade show active" id="geojson-justified"
+                                        name="geojson-justified" role="tabpanel" aria-labelledby="geojson-tab">
+                                        <div class="codeMirr" id="codeeditor-geojson"
+                                            style="width: 100%; height: vh; border: solid 2px gray;"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="json-justified" name="json-justified" role="tabpanel"
+                                        aria-labelledby="json-tab">
+                                        <div class="codeMirr" id="codeeditor-localjson"
+                                            style="width: 100%; height: vh; border: solid 2px gray;"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="help-justified" name="help-justified" role="tabpanel"
+                                        aria-labelledby="help-tab">
+                                        <div class="help" id="codeeditor-help"
+                                            style="width: 100%; height: vh; border: solid 2px gray;"></div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label class="col-lg-8" for=""></label>
+                                        <button class="btnJson col-lg-3 btn btn-primary mt-4" type="button">保存</button>
+                                    </div>
+                                </div><!-- End Default Tabs -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer">
+        <div class="copyright">
+            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+            
+    <!-- jquery js -->
+    <script src="../lib/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- bootrap @5.13 -->
+    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- excel-xlsx-->
+    <script src="../lib/excelExtend/read-excel-file.min.js"></script>
+    <!-- leaflet @1.9.3 -->
+    <script src="../lib/leafletLib/leaflet.min.js"></script>
+    <!-- leaflet plugins -->
+    <script src="../lib/ChineseTmsProviders/leaflet.ChineseTmsProviders.min.js"></script><!-- 中国地图供应商 -->
+    <script src="../lib/gbs84To-domestic/leaflet.mapCorrection.min.js"></script><!-- gps84转国内 -->
+    <script src="../lib/leaflet-marker-highlight/leaflet-marker-highlight.min.js"></script><!-- 高亮 -->
+    <script src="../lib/leaflet-contextmenu/leaflet.contextmenu.min.js"></script><!-- 上下文菜单用于右键菜单 -->
+    <script src="../lib/leafletPrint/leaflet.browser.print.min.js"></script><!-- 打印 -->
+    <!-- Leaflet-Geoman -->
+    <script src="../lib/Leaflet-Geoman/GeometryUtil.js"></script>
+    <script src="../lib/Leaflet-Geoman/leaflet-geoman.min.js"></script>
+    <script src="../lib/turf/turf.min.js"></script><!-- 地理空间计算依赖文件 -->
+    <!--KML GPX Convert GeoJSON -->
+    <script src="../lib/leaflet-filelayer/togeojson.min.js"></script> <!-- leaflet.filelayer.js依赖文件 -->
+    <script src="../lib/leaflet-filelayer/leaflet.filelayer-dis.min.js"></script><!-- 本地文件数据加载 -->
+    <!-- codeMirror -->
+    <script src="../lib/codeMirror/lib/codemirror.min.js"></script>
+    <!-- codeMirror plugins -->
+    <script src="../lib/codeMirror/mode/javascript/javascript.min.js"></script>
+    <script src="../lib/codeMirror/mode/css/css.min.js"></script>
+    <script src="../lib/codeMirror/addon/display/autorefresh.min.js"></script>
+    <!-- main -->
+    
+    <script src="../lib/main/disDrawMap.min.js"></script>
+    <script src="../lib/main/showCodeMirror.min.js"></script>
+    
+</body>
+
+</html>

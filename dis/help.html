@@ -1,0 +1,50 @@
+<div class="card " style="width: 100%; height: vh">
+    <div class="card-body  m-2 p-0">
+        <div class="col-lg-12 " style="width: 100%; height: vh;">
+            <h2 id="help">帮助</h2>
+            <p><strong>DataVGeojson</strong>
+                是一种用于创建、查看和共享地图的快速、简单的工具。
+                DataVGeojson以开源空间数据格式 GeoJSON为
+                <a href="http://geojson.org/">标准</a>
+                ，它可以导入 GeoJSON, KML、GPX、XLSX 格式的文件。
+            </p>
+           
+            <h3 id="ive-got-data">导入数据</h3>
+            <p>
+                如果您有数据，例如 KML、GeoJSON 或 XLSX文件,只需将其拖放到页面上或单击“打开”并选择您的文件。
+                您的数据应该出现在地图上！
+            </p>
+            <h3>XLSX文件数据格式</h3>
+            <p>excel电子表格坐标值为数值,纬度在前经度在后。</p>
+            <h3>Filejson</h3>
+            <p>导入的数据将会写入Filejson中。
+                Filejson显示区域将会显示导入的KML、GeoJSON 或 XLSX文件中的数据,在导入过程中程序会将数据统一转换成为Geojson。
+                由于导入的测量数据非常保贵,对于这些数据的最初想法就是不去改动它,并完整显示导入的数据。
+            </p>
+            <h3>DrawGeojson</h3>
+            <p>绘图工具所绘制的点、多边形、直线、矩形和圆形将会写入DrawGeojson中。</p>
+            <h3>要素</h3>
+            <p>
+                使用绘图工具绘制点、多边形、直线、矩形和圆形。
+                绘制完形状后，您可以通过单击为每个要素添加信息，编辑要素的属性。
+            </p>
+            <p>
+                注意:DrawGeojson 不支持圆形，因此圆形绘图工具实际上是在创建一个具有 64 个顶点的圆形多边形。
+            </p>
+            <h3>编辑</h3>
+            <p>
+                要编辑几何图形，请单击编辑按钮进入编辑模式。
+                默认情况下选择所有功能。
+                单击以选择特征或顶点。
+                按删除键删除选定的特征或顶点。
+                拖动以移动选定的顶点。
+            </p>
+            <p>
+                GeoJSON 中的属性存储为“键值对”。
+                您可以通过单击地图上的要素并在弹出窗口中编辑属性。
+            </p>
+
+
+        </div>
+    </div>
+</div>
