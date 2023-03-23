@@ -1,0 +1,27 @@
+{
+  "name": "datavgeojson",
+  "version": "1.0.0",
+  "description": "* DataVGeojson 是基于[leaflet](https://leafletjs.com/reference.html#videooverlay) 与 [CodeMirror](https://codemirror.net/)的数据可视化绘图平台\r * 是一种用于创建、查看和共享地图的快速、简单的工具。DataVGeojson以开源空间数据格式 [GeoJSON](https://geojson.org/)为标准，它可以导入 GeoJSON, KML、GPX、XLSX 格式的文件。\r * DataVGeojson 是用于高精度地图绘图的平台，是高精度地图建模，与空间分析的简单的工具它可以用于厘米或毫米级的绘图。\r * DataVGeojson 显示图层为32层。",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackchenzlp/dataVgeojson.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackchenzlp/dataVgeojson/issues"
+  },
+  "homepage": "https://github.com/jackchenzlp/dataVgeojson#readme",
+  "devDependencies": {
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  }
+}
