@@ -4,32 +4,23 @@
 <head>
     <title>DataVGeojson</title>
     
-    <link href="../img/favicon.png" rel="icon" type="image/x-icon"><!-- 图标库 -->
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../lib/bootstrap//css/style.css">
-    <!-- leaflet -->
-    <link rel="stylesheet" href="../lib/leafletLib/leaflet.css">
-    <!-- leaflet Draw -->
-    <link rel="stylesheet" href="../lib/Leaflet-Geoman/leaflet-geoman.css">
-    <!-- leaflet plugins -->
-    <link rel="stylesheet" href="../lib/leaflet-marker-highlight/leaflet-marker-highlight.css"><!-- 高亮 -->
-    <link rel="stylesheet" href="../lib/leaflet-contextmenu/leaflet.contextmenu.min.css"> <!-- 上下文菜单用于鼠标右键 -->
-    <!-- codeMirror -->
-    <link rel="stylesheet" href="../lib/codeMirror/lib/codemirror.css">
-    <link rel="stylesheet" href="../lib/codeMirror/theme/idea.css">
-    <style>
-        /* color popup */
-        .hr-line-solid {
-            border-top: 2px solid #D3D3D3;
-            color: #fff;
-            background-color: #FAEBD7;
-            height: 1px;
-            margin: 5px 0
-        }
-
-        ;
-    </style>
+    <link href="./img/favicon.png" rel="icon" type="image/x-icon"><!-- 图标库 -->
+   <!-- bootstrap -->
+   <!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../lib/bootstrap//css/style.css"> -->
+   <!-- leaflet -->
+   <!-- <link rel="stylesheet" href="../lib/leafletLib/leaflet.css"> -->
+   <!-- leaflet Draw -->
+   <!-- <link rel="stylesheet" href="../lib/Leaflet-Geoman/leaflet-geoman.css"> -->
+   <!-- leaflet plugins -->
+   <!-- <link rel="stylesheet" href="../lib/leaflet-marker-highlight/leaflet-marker-highlight.css"> --><!-- 高亮 -->
+   <!-- <link rel="stylesheet" href="../lib/leaflet-contextmenu/leaflet.contextmenu.min.css"> --> <!-- 上下文菜单用于鼠标右键 -->
+   <!-- codeMirror -->
+   <!-- <link rel="stylesheet" href="../lib/codeMirror/lib/codemirror.css"> -->
+   <!-- <link rel="stylesheet" href="../lib/codeMirror/theme/idea.css"> -->
+   <!-- <link rel="stylesheet" href="../lib/main/css/popup.css"> -->
+    
+  
 </head>
 
 <body>
@@ -37,7 +28,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center" style="z-index:10000 ;">
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
-                <img src="../img/logo.png" alt="">
+                <img src="./img/logo.png" alt="">
                 <span class="d-none d-lg-block">DataVGeojson</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -124,36 +115,35 @@
             class="bi bi-arrow-up-short"></i></a>
             
     <!-- jquery js -->
-    <script src="../lib/jQuery/jquery-3.6.0.min.js"></script>
+    <!-- <script src="../lib/jQuery/jquery-3.6.0.min.js"></script> -->
     <!-- bootrap @5.13 -->
-    <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <!--  <script src="../lib/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <!-- excel-xlsx-->
-    <script src="../lib/excelExtend/read-excel-file.min.js"></script>
+    <!-- <script src="../lib/excelExtend/read-excel-file.min.js"></script> -->
     <!-- leaflet @1.9.3 -->
-    <script src="../lib/leafletLib/leaflet.min.js"></script>
+    <!-- <script src="../lib/leafletLib/leaflet.min.js"></script> -->
     <!-- leaflet plugins -->
-    <script src="../lib/ChineseTmsProviders/leaflet.ChineseTmsProviders.min.js"></script><!-- 中国地图供应商 -->
-    <script src="../lib/gbs84To-domestic/leaflet.mapCorrection.min.js"></script><!-- gps84转国内 -->
-    <script src="../lib/leaflet-marker-highlight/leaflet-marker-highlight.min.js"></script><!-- 高亮 -->
-    <script src="../lib/leaflet-contextmenu/leaflet.contextmenu.min.js"></script><!-- 上下文菜单用于右键菜单 -->
-    <script src="../lib/leafletPrint/leaflet.browser.print.min.js"></script><!-- 打印 -->
+    <!-- <script src="../lib/ChineseTmsProviders/leaflet.ChineseTmsProviders.min.js"></script> -->  <!-- 中国地图供应商 -->
+    <!-- <script src="../lib/gbs84To-domestic/leaflet.mapCorrection.min.js"></script> --><!-- gps84转国内 -->
+    <!-- <script src="../lib/leaflet-marker-highlight/leaflet-marker-highlight.min.js"></script>--><!-- 高亮 -->
+    <!-- <script src="../lib/leaflet-contextmenu/leaflet.contextmenu.min.js"></script>--><!-- 上下文菜单用于右键菜单 -->
+    <!-- <script src="../lib/leafletPrint/leaflet.browser.print.min.js"></script> --><!-- 打印 -->
     <!-- Leaflet-Geoman -->
-    <script src="../lib/Leaflet-Geoman/GeometryUtil.js"></script>
-    <script src="../lib/Leaflet-Geoman/leaflet-geoman.min.js"></script>
-    <script src="../lib/turf/turf.min.js"></script><!-- 地理空间计算依赖文件 -->
+    <!-- <script src="../lib/Leaflet-Geoman/GeometryUtil.js"></script> -->
+    <!-- <script src="../lib/Leaflet-Geoman/leaflet-geoman.min.js"></script> -->
+    <!-- <script src="../lib/turf/turf.min.js"></script> --> <!-- 地理空间计算依赖文件 -->
     <!--KML GPX Convert GeoJSON -->
-    <script src="../lib/leaflet-filelayer/togeojson.min.js"></script> <!-- leaflet.filelayer.js依赖文件 -->
-    <script src="../lib/leaflet-filelayer/leaflet.filelayer-dis.min.js"></script><!-- 本地文件数据加载 -->
+    <!-- <script src="../lib/leaflet-filelayer/togeojson.min.js"></script>--> <!-- leaflet.filelayer.js依赖文件 -->
+    <!-- <script src="../lib/leaflet-filelayer/leaflet.filelayer-dis.min.js"></script>--><!-- 本地文件数据加载 -->
     <!-- codeMirror -->
-    <script src="../lib/codeMirror/lib/codemirror.min.js"></script>
+    <!-- <script src="../lib/codeMirror/lib/codemirror.min.js"></script> -->
     <!-- codeMirror plugins -->
-    <script src="../lib/codeMirror/mode/javascript/javascript.min.js"></script>
-    <script src="../lib/codeMirror/mode/css/css.min.js"></script>
-    <script src="../lib/codeMirror/addon/display/autorefresh.min.js"></script>
-    <!-- main -->
-    
-    <script src="../lib/main/disDrawMap.min.js"></script>
-    <script src="../lib/main/showCodeMirror.min.js"></script>
+    <!-- <script src="../lib/codeMirror/mode/javascript/javascript.min.js"></script> -->
+    <!-- <script src="../lib/codeMirror/mode/css/css.min.js"></script> -->
+    <!-- <script src="../lib/codeMirror/addon/display/autorefresh.min.js"></script> -->
+    <!-- main --> 
+    <!-- <script src="./main/disDrawMap.js"></script> -->
+    <!-- <script src="./main/showCodeMirror.js"></script> -->
     
 </body>
 
